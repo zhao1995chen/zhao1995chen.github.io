@@ -43,6 +43,16 @@
     <input v-model="message">
   </div>
 
+  <div id="app7">
+    <ol>
+      <todo-item
+        v-for="item in groceryList"
+        v-bind:todo="item"
+        v-bind:key="item.id"
+      ></todo-item>
+    </ol>
+  </div>
+
   <script type="text/javascript">
     let app = new Vue({
       el: "#app",
@@ -50,21 +60,21 @@
         message: "Hello Vue!",
         name: "Vue"
       }
-    });
+    })
 
     let app2 = new Vue({
       el: "#app2",
       data: {
         message: "頁面在 " + new Date().toLocaleString() + " 載入"
       }
-    });
+    })
 
     let app3 = new Vue({
       el: "#app3",
       data: {
         seen: true
       }
-    });
+    })
 
     let app4 = new Vue({
       el: "#app4",
@@ -75,7 +85,7 @@
           {text: "Do a side-project"}
         ]
       }
-    });
+    })
 
     let app5 = new Vue({
       el: "#app5",
@@ -89,12 +99,28 @@
           }
         }
       },
-    });
+    })
 
     let app6 = new Vue({
       el: "#app6",
       data: {
         message: "Hello Vue!"
+      }
+    })
+
+    Vue.component("todo-item", {
+      props: ['todo'],
+      template: '<li>{{todo.text}}</li>'
+    })
+
+    let app7 = new Vue({
+      el: "#app7",
+      data: {
+        groceryList: [
+          {id: 0, text: "蔬菜"},
+          {id: 1, text: "奶酪"},
+          {id: 2, text: "隨便吧"},
+        ]
       }
     })
   </script>
