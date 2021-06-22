@@ -1,0 +1,160 @@
+/* https://fonts.google.com/ */
+@font-face {
+  font-family: Staatliches;
+  src: url(./fonts/Staatliches-Regular.ttf);
+}
+
+@font-face {
+  font-family: Inter;
+  src: url(./fonts/Inter-Medium.ttf);
+}
+
+:root {
+  /* https://coolors.co/palettes/trending */
+  /* theme 1 */
+  --light-blue: #8ecae6;
+  --blue-green: #219ebc;
+  --prussian-blue: #023047;
+  --honey-yellow: #ffb703;
+  --orange: #fb8500;
+
+  /* theme 2 */
+  --imperial-red: #e63946;
+  --honeydew: #f1faee;
+  --powder-blue: #a8dadc;
+  --celadon-blue: #457b9d;
+  --prussian-blue: #1d3557;
+
+  /* theme 3 */
+  --red-salsa: #f94144;
+  --orange-red: #f3722c;
+  --yellow-orange-color-wheel: #f8961e;
+  --mango-tango: #f9844a;
+  --maize-crayola: #f9c74f;
+  --pistachio: #90be6d;
+  --zomp: #43aa8b;
+  --cadet-blue: #4d908e;
+  --queen-blue: #577590;
+  --cg-blue: #277da1;
+
+  /* used */
+  --primary: var(--prussian-blue);
+  --secondary-gray: var(--honeydew);
+  --secondary-light-blue: var(--powder-blue);
+  --secondary-dark-blue: var(--celadon-blue);
+  --secondary-green: var(--zomp);
+  --secondary-yellow: var(--honey-yellow);
+}
+
+*,
+*:before,
+*:after {
+  font-family: Inter, Staatliches;
+}
+
+body {
+  background-color: var(--secondary-gray);
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: bolder;
+  color: var(--secondary-light-blue);
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: var(--secondary-light-blue);
+}
+
+p,
+span {
+  color: var(--primary);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.header {
+  background: var(--primary);
+  height: 300px;
+}
+
+.title h1 {
+  font-size: 4em;
+  text-shadow: -4px 4px 0px var(--secondary-gray);
+  color: var(--primary);
+}
+
+.title {
+  position: relative;
+}
+
+.title .bg {
+  background: var(--secondary-light-blue);
+  bottom: 15px;
+  left: -15px;
+  height: 40px;
+  width: 300px;
+  z-index: -1;
+  position: absolute;
+}
+
+.btn-outline-secondary {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.card {
+  transition: all 0.05s ease;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.card .card-body .card-title {
+  color: var(--primary);
+  font-size: 24px;
+  text-shadow: none;
+}
+
+.card:hover .card-body h1,
+.card:hover .card-body span {
+  color: var(--secondary-dark-blue);
+}
+
+.card:hover .btn-outline-secondary {
+  color: var(--secondary-dark-blue);
+  border-color: var(--secondary-dark-blue);
+}
+
+.card:hover .btn-outline-secondary:active,
+.card:hover .btn-outline-secondary:hover {
+  color: white;
+  background: var(--secondary-dark-blue);
+  border-color: var(--secondary-dark-blue);
+}
+
+.card:hover .btn-outline-secondary:focus {
+  box-shadow: 0 0 0 0.25rem rgb(69 123 157 / 50%);
+}
+
+.footer {
+  background: var(--primary);
+  height: 100px;
+}
+
+.footer p {
+  color: var(--secondary-light-blue);
+}
+
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
