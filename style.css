@@ -153,8 +153,22 @@ img {
   color: var(--secondary-light-blue);
 }
 
+.select {
+  color: var(--secondary-gray);
+  background-color: var(--primary);
+}
+
 @media screen and (max-width: 767px) {
-  h1 {
+  .header {
+    height: 100px;
+  }
+
+  h1,
+  .title h1 {
     font-size: 3rem;
+  }
+
+  .header h2 {
+    display: none;
   }
 }
