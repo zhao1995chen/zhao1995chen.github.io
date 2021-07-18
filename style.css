@@ -79,7 +79,28 @@ img {
 
 .header {
   background: var(--primary);
-  height: 300px;
+  padding: 3rem 0;
+  /* height: 300px; */
+}
+
+section {
+  cursor: pointer;
+}
+
+section .title {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+section h1,
+section p,
+section li {
+  color: var(--secondary-gray);
+  font-weight: bolder;
+}
+
+section:not(:first-child) {
+  margin-top: 30px;
 }
 
 .title h1 {
